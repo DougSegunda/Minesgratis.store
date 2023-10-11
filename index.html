@@ -331,28 +331,26 @@
       </div>
     </div>
 
+    <div class="row">
+      <span class="text-center text-sm-center text-uppercase">
+        Veja o resultado dos alunos que já fazem parte do canal
+      </span>
+
+      <div
+        id="carouselExample"
+        class="carousel slide mt-5"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner" id="carouselInner"></div>
+      </div>
+    </div>
+
     <footer>
-      <div class="text-center termos">
+      <div class="text-center termos mt-5">
         <a href="termos.html">Termos de Uso</a> |
         <a href="privacidade.html">Política de Privacidade</a>
       </div>
     </footer>
-    <!-- 
-      <div class="text-center mt-5">
-        <img class="img-fluid" src="./assets/img/avatar.jpg" />
-      </div>
-
-      <div class="row mt-5">
-        <span class="text-center fs-4 text-uppercase">
-          Veja o resultado dos alunos que já fazem parte do canal
-        </span>
-
-        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner" id="carouselInner">
-         As imagens serão carregadas aqui 
-          </div> -->
-    <!-- </div>
-    </div> -->
 
     <script type="text/javascript">
       setTimeout(() => {
@@ -391,7 +389,8 @@
         "./assets/img/prova7.jpeg",
         "./assets/img/prova8.jpeg",
         "./assets/img/prova9.jpeg",
-        "./assets/img/prova10.jpeg",
+        "./assets/img/prova11.jpeg",
+        "./assets/img/prova12.jpeg",
       ];
 
       // Cria os elementos do carousel
@@ -415,7 +414,7 @@
       // Inicializa o carousel
       var myCarousel = document.querySelector("#carouselExample");
       var carousel = new bootstrap.Carousel(myCarousel, {
-        interval: 1000, // 1,5 segundo
+        interval: 3000, // 3 segundos
       });
     </script>
   </body>
