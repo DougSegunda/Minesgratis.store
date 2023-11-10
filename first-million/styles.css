@@ -1,0 +1,117 @@
+@keyframes zooming {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1); /* Aumenta em 10% o tamanho original */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+header {
+  background-color: #6e1e1f;
+}
+
+main {
+  background-color: black;
+}
+
+.title {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.zooming {
+  animation: zooming 1.25s ease infinite;
+}
+
+.lista {
+  background-image: url(./images/background-red.jpeg);
+  background-size: cover;
+}
+
+li {
+  list-style: none;
+}
+
+.promo {
+  color: #eb161a;
+  font-weight: bold;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.number {
+  background-color: #6e1e1f;
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  line-height: 40px;
+  height: 40px;
+  font-weight: bold;
+}
+
+.benefit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7em;
+}
+
+.lista-2 {
+  background-image: url(./images/background-red-2.jpeg);
+  background-size: cover;
+}
+
+.yellow {
+  color: #f5de38;
+}
+
+.green {
+  color: green;
+}
+
+.square {
+  background-color: yellow;
+  color: #000;
+  width: fit-content;
+}
+
+.card-img-top {
+  height: 350px;
+
+  object-fit: cover;
+}
+
+a {
+  font-weight: bold !important;
+  font-size: 1em !important;
+}
+
+.red-tag {
+  background-color: #eb161a;
+}
+
+.social-prove img {
+  height: 300px;
+  margin: 10px;
+  object-fit: contain;
+}
+
+.red {
+  color: #eb161a;
+}
