@@ -1,421 +1,467 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Roleta Free 🤑</title>
-
-    <style>
-      .pop-up {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: green;
-        color: white;
-        padding: 10px;
-        border-radius: 5px;
-        z-index: 9999;
-        visibility: visible;
-        opacity: 1;
-        transition: visibility 0s, opacity 1s linear;
-        animation: blink 0.5s infinite alternate;
-      }
-
-      @keyframes blink {
-        from {
-          opacity: 1;
-        }
-        to {
-          opacity: 0;
-        }
-      }
-    </style>
-
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="styles.css" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Dosis:wght@200;300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Signika:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
       rel="stylesheet"
     />
-
-    <script
-      src="https://kit.fontawesome.com/4659ce90f7.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="./assets/css/com.css" />
-
-    <!-- Título da Página -->
-    <title>Roleta Free</title>
-
-    <style type="text/css">
-      header {
-        height: 8vh;
-        background-color: #21e921;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .title {
-        text-transform: uppercase;
-        font-family: "Oswald";
-        font-size: calc(2.4vw + 1vh);
-      }
-
-      body {
-        font-size: calc(2vw + 1vh);
-        color: white;
-        background-image: url("assets/img/bg.jpg");
-        background-color: rgba(0, 0, 0, 0.6);
-        background-position: center;
-        background-size: cover;
-        background-attachment: fixed;
-        background-blend-mode: darken;
-      }
-
-      .container-fluid {
-        padding: 2em 2em;
-      }
-
-      .carousel-item img {
-        height: 300px; /* Altura desejada */
-        width: auto;
-        max-width: 100%;
-        object-fit: contain;
-      }
-
-      .card {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        border: 2px solid #72e91d !important;
-        background-color: #000000;
-        border-radius: 20px;
-        overflow: hidden;
-      }
-
-      .card-body {
-        flex: 1;
-        gap: 2em;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        overflow: hidden;
-      }
-
-      .card-title {
-        font-size: 1.2em;
-        color: #46af2e;
-        font-weight: bold;
-        background-color: #ffff;
-      }
-
-      .card-subtitle {
-        font-size: 1.2em;
-        color: #ffff;
-        font-family: helvetica, arial, sans-serif;
-      }
-
-      .alcance {
-        text-decoration: underline;
-      }
-
-      .opere {
-        background-color: #e94621;
-      }
-
-      .lucro {
-        background-color: #199919;
-      }
-
-      .descubra {
-        padding: 1em 0;
-        font-size: 0.9em;
-        color: #bae921;
-        text-align: center;
-      }
-
-      .entre {
-        color: #ffff;
-      }
-
-      .img-fluid {
-        max-width: 94%;
-      }
-
-      .termos {
-        font-size: 0.5em;
-        align-items: center;
-      }
-
-      .glow-on-hover {
-        border: none;
-        outline: none;
-        color: #fff;
-        background: #111;
-        cursor: pointer;
-        position: relative;
-        z-index: 0;
-        border-radius: 10px;
-      }
-
-      .glow-on-hover:before {
-        content: "";
-        background: linear-gradient(
-          45deg,
-          #ff0000,
-          #ff7300,
-          #fffb00,
-          #48ff00,
-          #00ffd5,
-          #002bff,
-          #7a00ff,
-          #ff00c8,
-          #ff0000
-        );
-        position: absolute;
-        top: -2px;
-        left: -2px;
-        background-size: 400%;
-        z-index: -1;
-        filter: blur(5px);
-        width: calc(100% + 4px);
-        height: calc(100% + 4px);
-        animation: glowing 20s linear infinite;
-        border-radius: 10px;
-      }
-
-      .glow-on-hover:active:after {
-        background: transparent;
-      }
-
-      .glow-on-hover:after {
-        z-index: -1;
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: #55a7f3;
-        left: 0;
-        top: 0;
-        border-radius: 10px;
-      }
-
-      @keyframes glowing {
-        0% {
-          background-position: 0 0;
-        }
-        50% {
-          background-position: 400% 0;
-        }
-        100% {
-          background-position: 0 0;
-        }
-      }
-
-      footer,
-      a {
-        color: #ffff;
-      }
-    </style>
-    <!-- Meta Pixel Code -->
-    <script>
-      !(function (f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function () {
-          n.callMethod
-            ? n.callMethod.apply(n, arguments)
-            : n.queue.push(arguments);
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = "2.0";
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s);
-      })(
-        window,
-        document,
-        "script",
-        "https://connect.facebook.net/en_US/fbevents.js"
-      );
-      fbq("init", "941183010351600");
-      fbq("track", "PageView");
-    </script>
-    <noscript
-      ><img
-        height="1"
-        width="1"
-        style="display: none"
-        src="https://www.facebook.com/tr?id=941183010351600&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
   </head>
-
   <body>
     <header>
-      <div class="title fw-bold text-center">
-        Você acaba de receber o acesso 100% gratuito!
+      <div class="container text-center text-white p-3">
+        <div class="row d-flex justify-content-center">
+          <div class="title mb-4 fs-1">
+            Descubra a <b class="yellow">Fórmula de Cleópatra</b> para melhorar
+            seus relacionamentos e conquistar o coração de quem você deseja.
+          </div>
+          <div class="subtitle fs-3">
+            Apenas leia este livro se você quiser aprimorar sua atração e se
+            tornar uma mulher
+            <b class="yellow">irresistível e encantadora!</b>
+          </div>
+        </div>
       </div>
     </header>
-    <div class="container-fluid">
-      <div class="row justify-content-center">
-        <div class="col-md-6">
-          <div class="card text-uppercase text-wrap">
-            <div class="card-body">
-              <div class="card-title">
-                <p class="text-center m-0">
-                  Hoje é seu dia de sorte!!! Você foi um dos escolhidos...
-                </p>
-              </div>
-              <div class="card-subtitle">
-                <span class="alcance"
-                  >Alcance lucros extraordinários
-                  <span class="lucro">de R$ 100 a R$ 500 por dia!</span>
-                </span>
-                <span class="participe"
-                  >Participe do nosso grupo exclusivo,</span
-                >
-                <span class="opere"
-                  >opere e faça as jogadas ao vivo junto comigo!</span
-                >
-
-                <div class="descubra mt-3">
-                  <span
-                    >Descubra a simplicidade de lucrar! Método fácil, totalmente
-                    grátis .</span
-                  >
-                </div>
-              </div>
-              <button
-                class="glow-on-hover"
-                type="button"
-                onclick="window.location.href='https://t.me/Roulletegratis'"
-              >
-                <span class="text-uppercase"
-                  >Clique aqui para acessar o canal gratuito no telegram</span
-                >
-                <i class="fab fa-telegram"></i>
-              </button>
-
-              <span class="entre"
-                >Entre hoje e receba: mini curso exclusivo dentro do canal +
-                suporte 24h</span
-              >
+    <main>
+      <section>
+        <div class="container p-5">
+          <div class="row">
+            <div class="col d-flex justify-content-center">
+              <img class="img-fluid" src="./images/ocodiogo.jpg.png" />
             </div>
           </div>
         </div>
+      </section>
+      <div class="container">
+        <div class="row">
+          <div class="col d-flex justify-content-center">
+            <div class="subtitle text-white text-center fs-4">
+              <b class="yellow">
+                Pare de se sentir rejeitada, você merece ser amada e valorizada
+                como deve ser!</b
+              >
+            </div>
+          </div>
 
-        <div class="col-md-6 m-4">
-          <div class="text-center">
-            <img class="img-fluid" src="./assets/img/avatar.jpg" />
+          <div class="text-white text-start text-wrap fs-5 mt-4">
+            <p>
+              Não importa se você está solteira, ficando, namorando, casada ou
+              suspirando por alguém. O conhecimento compartilhado neste livro se
+              aplica a todos, <b>independentemente do seu status amoroso.</b>
+            </p>
+
+            <p>
+              Você vai desvendar os
+              <b class="yellow">métodos que Cleópatra empregava </b> para se
+              tornar uma mulher inesquecível e impactante, aquela que emana
+              autoconfiança e tem o dom de
+              <b class="red">conquistar corações</b>.
+            </p>
+
+            <p>
+              E posso garantir desde já que
+              <b
+                >ser uma mulher encantadora não tem absolutamente NADA A VER com
+                beleza superficial</b
+              >. A própria rainha do Egito, frequentemente retratada por atrizes
+              deslumbrantes, estava longe dos padrões de beleza da sua época...
+            </p>
+
+            <p>
+              Mas ela possuía esse "truque infalível" que a permitiu cativar
+              dois imperadores incrivelmente poderosos que ficaram extremamente
+              <b>apaixonados por ela</b>.
+            </p>
+
+            <p>
+              Embora seja verdade que uma mulher deslumbrante possa inicialmente
+              chamar a atenção de um homem, manter esse interesse é uma história
+              completamente diferente...
+            </p>
+
+            <p>
+              <b> A realidade é que todas as mulheres têm esse poder inato</b>,
+              mas poucas estão conscientes desse potencial interior. Muitas
+              imaginam que a sedução é um dom raro, reservado apenas para
+              algumas "escolhidas" por natureza.
+            </p>
+
+            <p>
+              Para despertar o seu próprio potencial, é simplesmente necessário
+              compreender os truques utilizados por mulheres que naturalmente
+              conquistam os homens e desenvolver essas mesmas características,
+              adaptando-as à sua realidade e essência única.
+            </p>
+
+            <p class="text-center">
+              <b class="red"
+                >A sua feminilidade é muito mais cativante e atraente do que
+                você imagina!</b
+              >
+            </p>
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="row">
-      <span class="text-center text-sm-center text-uppercase">
-        Veja o resultado dos alunos que já fazem parte do canal
-      </span>
-
-      <div
-        id="carouselExample"
-        class="carousel slide mt-5"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-inner" id="carouselInner"></div>
+      <div class="row">
+        <div class="col-12 d-flex justify-content-center m-3">
+          <a
+            type="button"
+            class="btn btn-warning zooming"
+            href="https://pay.kiwify.com.br/DpRmj08"
+            target="_blank"
+          >
+            DESEJO TER ACESSO
+          </a>
+        </div>
       </div>
-    </div>
+      <section>
+        <div class="container mt-2">
+          <div class="subtitle text-white text-center fs-4 mb-3">
+            - Os métodos secretos utilizados pelas mulheres mais atraentes do
+            mundo:
+          </div>
 
+          <div class="row m-2">
+            <div class="col-12 col-md-4 mb-3">
+              <div class="card">
+                <img class="card-img-top" src="./images/Marie-Doro.jpg" />
+                <div class="card-body">
+                  <h5 class="card-title">Marie Doro</h5>
+                  <p class="card-text">
+                    Marie Doro nasceu em 1882, nos Estados Unidos, ela foi uma
+                    atriz de teatro, mas também participou do início do cinema
+                    no mundo. Doro foi notada por um empresário que a levou para
+                    a Broadway, aonde ela trabalhou, e se casou com um diretor
+                    de cinema.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4 mb-3">
+              <div class="card">
+                <img class="card-img-top" src="./images/marlimorro.jpg" />
+                <div class="card-body">
+                  <h5 class="card-title">Marilyn Monroe</h5>
+                  <p class="card-text">
+                    Marilyn Monroe (1926-1962) estrelou diversos
+                    longas-metragens do cinema americano. Ela era considerada um
+                    símbolo sexual de sua época, incorporando o conceito da
+                    mulher feminina, sensual, segura e à frente do seu tempo!
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4 mb-3">
+              <div class="card">
+                <img class="card-img-top" src="./images/elizabeth-taylor.jpg" />
+                <div class="card-body">
+                  <h5 class="card-title">Elizabeth Taylor</h5>
+                  <p class="card-text">
+                    Elizabeth Taylor nasceu em 1932, na Inglaterra, foi uma das
+                    estrelas mais populares de Hollywood entre as décadas de
+                    1950 e 1960, ela atuou no primeiro filme da Cleópatra.
+                    Taylor ganhou o oscar em 1961, 1967 e em 1992, a academia
+                    lhe homenageou com o “prêmio humanitário INTERNACIONAL” foi
+                    considerada uma das mulheres mais atraentes e sedutoras da
+                    década de 60. .
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="red-tag text-center">
+          <div class="title fs-3">+7mil vidas transformadas</div>
+          <div class="title text-white fs-2">Relatos REAIS de leitoras:</div>
+        </div>
+
+        <div class="row social-prove">
+          <div class="col-12 col-md-6 d-flex justify-content-center">
+            <img src="./images/ps-1.jpeg" style="width: 200px" />
+          </div>
+          <div class="col-12 col-md-6 d-flex justify-content-center">
+            <img src="./images/ps-3.jpeg" />
+          </div>
+          <div class="col-12 col-md-6 d-flex justify-content-center">
+            <img src="./images/ps-2.jpeg" />
+          </div>
+
+          <div class="col-12 col-md-6 d-flex justify-content-center">
+            <img src="./images/ps-4.jpeg" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 d-flex justify-content-center">
+            <a
+              type="button"
+              class="btn btn-warning zooming m-3 p-3"
+              href="https://pay.kiwify.com.br/DpRmj08"
+              target="_blank"
+            >
+              QUERO TRANSFORMAR MINHA VIDA
+            </a>
+          </div>
+        </div>
+
+        <div class="lista text-white text-center mt-4 p-3">
+          <div class="fs-4 title">O que você vai aprender:</div>
+          <div class="m-2">
+            <li>
+              <i class="fas fa-check m-2"></i>Os métodos que Cléopatra e outras
+              mulheres sedutoras ultilizavam
+            </li>
+            <li>
+              <i class="fas fa-check m-2"></i>Trabalhar seu auto cuidado e se
+              valorizar
+            </li>
+            <li><i class="fas fa-check m-2"></i>Aumentar sua autoestima</li>
+            <li>
+              <i class="fas fa-check m-2"></i>Ser muito mais encantadora e
+              atraente
+            </li>
+            <li>
+              <i class="fas fa-check m-2"></i>Se tornar uma mulher cativante
+            </li>
+            <li>
+              <i class="fas fa-check m-2"></i>Melhorar sua inteligência
+              emocional
+            </li>
+            <li>
+              <i class="fas fa-check m-2"></i>Arrancar da memória pessoas que te
+              fizeram sofrer
+            </li>
+            <li>
+              <i class="fas fa-check m-2"></i>Seduzir a pessoa que você quiser
+            </li>
+            <li><i class="fas fa-check m-2"></i>Como manter o interesse</li>
+
+            <li>
+              <i class="fas fa-check m-2"></i>Como se tornar uma mulher poderosa
+              em todas as áreas da vida
+            </li>
+            <div class="fs-4 title mt-3">e muito mais...</div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container text-white text-center mt-4">
+          <div class="title fs-3">
+            Hoje você ainda vai receber
+            <span class="green">bônus exclusivos</span>, entre eles...
+          </div>
+          <div class="title fs-4 m-4">E-book COMO DESCOBRIR SEU ARQUÉTIPO</div>
+
+          <div class="subtitle">
+            Embarque em uma jornada fascinante em busca do seu verdadeiro eu!
+            "Como Descobrir seu Arquétipo: Revelando seu Poder
+          </div>
+          <div class="subtitle mt-3">
+            <div class="promo d-inline">
+              De
+              <p class="line-through d-inline">R$67,00</p>
+            </div>
+            <span class="d-inline">por R$0,00</span>
+          </div>
+          <div class="row m-5">
+            <div class="col d-flex justify-content-center">
+              <img class="img-fluid" src="./images/comodescobrir.jpg.png" />
+            </div>
+          </div>
+          <div class="title fs-4 m-4">
+            E-book Se tornando uma mulher misteriosa estrategista
+          </div>
+
+          <div class="subtitle">
+            Aprenda as maiores estratégias psicológicas para controlar a mente
+            dele.
+          </div>
+          <div class="subtitle mt-3">
+            <div class="promo d-inline">
+              De
+              <p class="line-through d-inline">R$67,00</p>
+            </div>
+            <span class="d-inline">por R$0,00</span>
+          </div>
+          <div class="row m-5">
+            <div class="col d-flex justify-content-center">
+              <img class="img-fluid" src="./images/comosetornar.jpg.png" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+              <a
+                type="button"
+                class="btn btn-warning zooming m-3 p-3"
+                href="https://pay.kiwify.com.br/DpRmj08"
+                target="_blank"
+              >
+                QUERO TRANSFORMAR MINHA VIDA
+              </a>
+            </div>
+          </div>
+          <div class="row p-5">
+            <div class="title fs-2 mb-5">
+              Benefícios únicos que você terá hoje:
+            </div>
+            <div class="col-12 col-md-4 mb-3 fs-4 benefit">
+              <div class="number">1</div>
+              Acesso imediato ao e-book e todas as próximas atualizações
+            </div>
+            <div class="col-12 col-md-4 mb-3 fs-4 benefit">
+              <div class="number">2</div>
+
+              Baixe e leia no modo offline quando quiser e em qualquer lugar no
+              mundo
+            </div>
+            <div class="col-12 col-md-4 mb-3 fs-4 benefit">
+              <div class="number">3</div>
+
+              100% de garantia de recebimento do produto via e-mail
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="lista-2 text-white text-center p-3">
+          <div class="fs-2 title yellow mb-3">
+            Você merece algo excepcional...
+          </div>
+
+          <div class="text-wrap text-center fs-4">
+            <p>
+              Ao longo do tempo, nos deparamos com inúmeras mulheres em cenários
+              tão diversos quanto se possa imaginar.
+            </p>
+            <p>
+              É verdadeiramente inspirador receber esses depoimentos e
+              testemunhar a autêntica alegria que isso trouxe para elas, e a
+              tranquilidade de reconquistar o amor próprio em primeiro plano.
+            </p>
+            <p>
+              A vida se torna notavelmente mais leve quando aprendemos a nos
+              valorizar, e fica ainda mais enriquecedora quando encontramos
+              alguém extraordinário para compartilhar o percurso ao nosso lado.
+            </p>
+            <p>
+              Posso assegurar que, não importa a sua situação atual, é possível
+              dar a volta por cima e transformar a sua realidade.
+            </p>
+            <p>
+              Você só precisa mudar o rumo na sua vida e dar o primeiro passo em
+              direção à sua própria metamorfose.
+            </p>
+            <p>
+              VOCÊ MERECE SER AMADA E ADMIRADA AUTENTICAMENTE, E ISSO É
+              INEGOCIÁVEL!
+            </p>
+            <p></p>
+            <p class="yellow">
+              <strong>
+                Portanto, para reescrever completamente essa história,
+                experimente este método que causou um impacto positivo na vida
+                de mais de 12 mil mulheres em todo o Brasil.
+              </strong>
+            </p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container text-center mt-5">
+          <div class="title text-white fs-1">GARANTIA</div>
+          <span class="title fs-1 square p-1">INCONDICIONAL</span>
+
+          <div class="row m-2 mt-4">
+            <div
+              class="col-12 col-md-6 d-flex align-items-center justify-content-center"
+            >
+              <img src="./images/7-dias-garantia.png" style="width: 200px" />
+            </div>
+            <div class="col-12 col-md-6 text-white subtitle fs-4 mt-4">
+              <p>
+                Eu acredito tanto neste programa que te darei
+                <b class="yellow">7 DIAS DE GARANTIA INCONDICIONAL</b>
+              </p>
+              <p>
+                Se por algum motivo você não gostar, nós devolveremos
+                <b class="yellow">TODO O SEU DINHEIRO</b>
+              </p>
+              <p>Agora ficou mais fácil de tomar a decisão, não é?</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 m-2 text-center text-white">
+              <div class="subtitle fs-2">Adquira agora mesmo o</div>
+              <div class="title fs-1 promo">"A Fórmula de Cleópatra"</div>
+
+              <div class="subtitle fs-5 text-white m-2">
+                <i class="fa fa-lock" aria-hidden="true"></i>
+                Suas informações estão 100% seguras
+              </div>
+
+              <div class="subtitle mt-3">
+                <b>
+                  <div class="d-inline">
+                    DE
+                    <p class="line-through d-inline">R$69,90</p>
+                  </div>
+                  <span class="d-inline"
+                    >POR SOMENTE
+                    <p class="d-inline" style="color: rgb(73, 230, 73)">
+                      R$19,90
+                    </p></span
+                  >
+                </b>
+                <div><b>PROMOÇÃO POR TEMPO LIMITADO!</b></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+              <a
+                href="https://pay.kiwify.com.br/DpRmj08"
+                target="_blank"
+                type="button"
+                class="btn btn-warning zooming m-3 p-3"
+              >
+                DESEJO ADQUIRIR
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer>
-      <div class="text-center termos mt-5">
-        <a href="termos.html">Termos de Uso</a> |
-        <a href="privacidade.html">Política de Privacidade</a>
+      <div class="text-center">
+        Copyright 2023 – Segredo de Cleópatra ®
+        <br />
+        Todos os Direitos Reservados
       </div>
     </footer>
-
-    <script type="text/javascript">
-      setTimeout(() => {
-        document.getElementById("cta1").classList.remove("d-none");
-      }, 0); // temporização da Call to Action (em milissegundos)
-    </script>
-
     <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./assets/js/com.js"></script>
-
-    <div class="pop-up">últimas vagas disponiveis</div>
-
-    <script>
-      // URLs das imagens
-      const imageUrls = [
-        "./assets/img/prova1.jpeg",
-        "./assets/img/prova2.jpeg",
-        "./assets/img/prova3.jpeg",
-        "./assets/img/prova4.jpeg",
-        "./assets/img/prova5.jpeg",
-        "./assets/img/prova6.jpeg",
-        "./assets/img/prova7.jpeg",
-        "./assets/img/prova8.jpeg",
-        "./assets/img/prova9.jpeg",
-        "./assets/img/prova11.jpeg",
-        "./assets/img/prova12.jpeg",
-      ];
-
-      // Cria os elementos do carousel
-      const carouselInner = document.getElementById("carouselInner");
-      imageUrls.forEach((url, index) => {
-        const carouselItem = document.createElement("div");
-        carouselItem.classList.add("carousel-item");
-        if (index === 0) {
-          carouselItem.classList.add("active");
-        }
-
-        const img = document.createElement("img");
-        img.src = url;
-        img.classList.add("d-block", "w-100");
-        img.alt = `Imagem ${index + 1}`;
-
-        carouselItem.appendChild(img);
-        carouselInner.appendChild(carouselItem);
-      });
-
-      // Inicializa o carousel
-      var myCarousel = document.querySelector("#carouselExample");
-      var carousel = new bootstrap.Carousel(myCarousel, {
-        interval: 3000, // 3 segundos
-      });
-    </script>
   </body>
 </html>
