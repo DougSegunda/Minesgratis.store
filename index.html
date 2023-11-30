@@ -38,6 +38,10 @@
   src="https://www.facebook.com/tr?id=678646654359433&ev=PageView&noscript=1"
   /></noscript>
   <!-- End Meta Pixel Code -->
+  <script>
+    fbq('track', 'Purchase');
+  </script>
+
   </head>
   <body>
     <header>
@@ -137,6 +141,8 @@
       <div class="row">
         <div class="col-12 d-flex justify-content-center m-3">
           <a
+          id="primeiroBotao"
+          style="display: none"
             type="button"
             class="btn btn-warning zooming"
             href="https://pay.kiwify.com.br/DpRmj08"
@@ -228,6 +234,8 @@
         <div class="row">
           <div class="col-12 d-flex justify-content-center">
             <a
+            id="segundoBotao"
+            style="display: none"
               type="button"
               class="btn btn-warning zooming m-3 p-3"
               href="https://pay.kiwify.com.br/DpRmj08"
@@ -326,6 +334,8 @@
           <div class="row">
             <div class="col-12 d-flex justify-content-center">
               <a
+              id="terceiroBotao"
+              style="display: none"
                 type="button"
                 class="btn btn-warning zooming m-3 p-3"
                 href="https://pay.kiwify.com.br/DpRmj08"
@@ -479,5 +489,36 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      // Função para exibir o botão após um delay
+      function exibirBotaoComDelay() {
+        // Obtém o elemento do botão pelo ID
+        var primeiroBotao = document.getElementById('primeiroBotao')
+        var segundoBotao = document.getElementById('segundoBotao')
+        var terceiroBotao = document.getElementById('terceiroBotao')
+
+        // Define um delay de 3000 milissegundos (3 segundos)
+        var delayPrimeiroBotao = 30000
+        var delaySegundoBotao = 50000
+        var delayTerceiroBotao = 50000
+
+        // Utiliza setTimeout para exibir o botão após o delay
+        setTimeout(function () {
+          primeiroBotao.style.display = 'block' // Altera o estilo para exibir o botão
+        }, delayPrimeiroBotao)
+
+        setTimeout(function () {
+          segundoBotao.style.display = 'block' // Altera o estilo para exibir o botão
+        }, delaySegundoBotao)
+
+        setTimeout(function () {
+          terceiroBotao.style.display = 'block' // Altera o estilo para exibir o botão
+        }, delayTerceiroBotao)
+      }
+
+      // Chama a função ao carregar a página (ou em algum outro ponto desejado)
+      exibirBotaoComDelay()
+    </script>
   </body>
 </html>
