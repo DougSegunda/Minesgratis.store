@@ -21,7 +21,10 @@ body {
 
 header {
   background: rgb(136,29,35);
-background: radial-gradient(circle, rgba(136,29,35,1) 0%, rgba(48,3,13,1) 100%);
+  background: -moz-radial-gradient(circle, rgba(136,29,35,1) 0%, rgba(48,3,13,1) 100%);
+  background: -webkit-radial-gradient(circle, rgba(136,29,35,1) 0%, rgba(48,3,13,1) 100%);
+  background: radial-gradient(circle, rgba(136,29,35,1) 0%, rgba(48,3,13,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#881d23",endColorstr="#30030d",GradientType=1);
 }
 
 main {
