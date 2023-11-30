@@ -15,8 +15,13 @@ body {
   overflow-x: hidden;
 }
 
+.img-fluid {
+  max-width: 70% !important;
+}
+
 header {
-  background-color: #6e1e1f;
+  background: rgb(136,29,35);
+background: radial-gradient(circle, rgba(136,29,35,1) 0%, rgba(48,3,13,1) 100%);
 }
 
 main {
